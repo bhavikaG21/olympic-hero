@@ -64,30 +64,20 @@ winter_df['Golden_Ratio'] = winter_df['Gold_Winter']/winter_df['Total_Winter']
 
 top_df['Golden_Ratio'] = top_df['Gold_Total']/top_df['Total_Medals']
 
-#SUMData = summer_df[summer_df.Golden_Ratio == summer_df.Golden_Ratio.max()]
-#summer_max_ratio= SUMData['Golden_Ratio']
-#print(round(summer_max_ratio,2))
-#summer_country_gold = SUMData['Country_Name']
-#print(summer_country_gold)
-summer_max_ratio = 0.42
-summer_country_gold = 'China'
+summer_max_ratio=max(summer_df['Golden_Ratio'])
+print(summer_max_ratio)
+summer_country_gold=summer_df.loc[summer_df['Golden_Ratio'].idxmax(),'Country_Name']
+print(summer_country_gold)
 
-#WinData = winter_df[winter_df.Golden_Ratio == winter_df.Golden_Ratio.max()]
-#winter_max_ratio= WinData['Golden_Ratio']
-#print(round(winter_max_ratio,2))
-#winter_country_gold = WinData['Country_Name']
-#print(winter_country_gold)
-winter_max_ratio = 0.40
-winter_country_gold = 'Soviet Union'
+winter_max_ratio=max(winter_df['Golden_Ratio'])
+print(winter_max_ratio)
+winter_country_gold=winter_df.loc[winter_df['Golden_Ratio'].idxmax(),'Country_Name']
+print(winter_country_gold)
 
-#topData = top_df[top_df.Golden_Ratio == top_df.Golden_Ratio.max()]
-#top_max_ratio= topData['Golden_Ratio']
-#print(round(top_max_ratio,2))
-#top_country_gold = topData['Country_Name']
-#print(top_country_gold)
-top_max_ratio = 0.40
-top_country_gold = 'China'
-
+top_max_ratio=max(top_df['Golden_Ratio'])
+print(top_max_ratio)
+top_country_gold=top_df.loc[top_df['Golden_Ratio'].idxmax(),'Country_Name']
+print(top_country_gold)
 
 
 # --------------
